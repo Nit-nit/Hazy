@@ -7,7 +7,6 @@ const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_M
 
 //custom classes
 const ping = "<@913559840780091453>";
-const action = require('discord.js');
 const snippet = "```";
 
 //login log
