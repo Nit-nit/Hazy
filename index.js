@@ -14,13 +14,19 @@ client.on('ready', () => {
   console.log(`logged in as ${client.user.tag}`)
 })
 
-//getting guilds list
+//console guilds list logger
 client.on("ready", () => {
   const Guilds = client.guilds.cache.map(guild => guild.name);
   console.log(Guilds);
 });
 
-//ping message
+//console message logger
+client.on('messageCreate', (message) => {
+  if (message.author.id === `913559840780091453`) return
+  console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
+});
+
+//ping message (help command)
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
   if (message.content === `<@913559840780091453>`) {  
@@ -35,12 +41,6 @@ client.on('messageCreate', (message) => {
   if (message.content.toLowerCase() === `${ping} guilds`) {
     message.reply(`i am available in the following guilds\n${snippet}\n${Guilds}\n${snippet}`);
   }
-});
-
-//console message logger
-client.on('messageCreate', (message) => {
-  if (message.author.id === `913559840780091453`) return
-  console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
 });
 
 //channels message logger
