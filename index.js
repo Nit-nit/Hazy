@@ -37,7 +37,6 @@ client.on('messageCreate', (message) => {
   }
 });
 
-
 //console message logger
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
