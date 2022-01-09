@@ -32,6 +32,8 @@ client.on('messageCreate', (message) => {
   client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
 });
 
+// ========== COMMANDS STARTS HERE ==========
+
 //ping message (help command)
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
