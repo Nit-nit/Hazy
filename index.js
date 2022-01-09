@@ -20,10 +20,16 @@ client.on("ready", () => {
   console.log(Guilds);
 });
 
-//console message logger
+//console message log
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
+});
+
+//channels message log
+client.on('messageCreate', (message) => {
+  if (message.author.id === `913559840780091453`) return
+  client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
 });
 
 //ping message (help command)
@@ -42,12 +48,6 @@ client.on('messageCreate', (message) => {
     message.reply(`i am available in the following guilds\n${snippet}\n${Guilds}\n${snippet}`);
   }
 });
-
-//channels message logger
-client.on('messageCreate', (message) => {
-  if (message.author.id === `913559840780091453`) return
-  client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
-})
 
 // Login to Discord with your client's token
 client.login(config.token)
