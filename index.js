@@ -1,4 +1,3 @@
-
 // Require the necessary discord.js classes
 const Discord = require('discord.js');
 const config = require('./config.json');
@@ -7,6 +6,7 @@ const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_M
 
 //custom classes
 const ping = "<@913559840780091453>";
+const action = require('discord.js');
 const snippet = "```";
 
 //login log
@@ -14,27 +14,31 @@ client.on('ready', () => {
   console.log(`logged in as ${client.user.tag}`)
 })
 
-//console guilds list log
+//getting guilds list
 client.on("ready", () => {
   const Guilds = client.guilds.cache.map(guild => guild.name);
   console.log(Guilds);
 });
 
-//console message log
+/**
+// some basic log functions, these arent important i will say, but anyways
+
+//message logger
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
 });
 
-//channels message log
+//channels logs
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
-});
+})
+**/
 
 // ========== COMMANDS STARTS HERE ==========
 
-//ping message (help command)
+//ping message
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
   if (message.content === `<@913559840780091453>`) {  
@@ -42,7 +46,7 @@ client.on('messageCreate', (message) => {
   }
 });
 
-//servers list command
+//server list
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
   const Guilds = client.guilds.cache.map(guild => guild.name);
