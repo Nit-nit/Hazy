@@ -20,7 +20,7 @@ client.on("ready", () => {
   console.log(Guilds);
 });
 
-/**
+/*
 // some basic log functions, these arent important i will say, but anyways
 
 //message logger
@@ -34,7 +34,7 @@ client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
 })
-**/
+*/
 
 // ========== COMMANDS STARTS HERE ==========
 
