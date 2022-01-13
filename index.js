@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log(`logged in as ${client.user.tag}`)
 })
 
-//getting guilds list
+//console guilds list
 client.on("ready", () => {
   const Guilds = client.guilds.cache.map(guild => guild.name);
   console.log(Guilds);
