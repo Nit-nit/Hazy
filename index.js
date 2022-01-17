@@ -46,7 +46,7 @@ client.on('messageCreate', (message) => {
   }
 });
 
-//server list
+//server list (it wont list out if there are too many servers because the message will be too big to get answered by bot)
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
   const Guilds = client.guilds.cache.map(guild => guild.name);
