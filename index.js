@@ -23,28 +23,34 @@ client.on("ready", () => {
 /*
 // some basic log functions, these arent important i will say, but anyways
 
-//message logger
+//message console logger
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
 });
 
-//channels logs
+//message channels logs
 client.on('messageCreate', (message) => {
   if (message.author.id === `913559840780091453`) return
   client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
 })
+
+//channels listing in console
+client.on('ready', () => {
+  const channelName = client.channels.cache.map(channel => channel.name);
+  console.log(channelName);
+});
 */
 
 // ========== COMMANDS STARTS HERE ==========
 
-//ping message
+//ping message (it works as a help command)
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
-  if (message.content === `<@913559840780091453>`) {  
+  if (message.content.toLowerCase() === `<@913559840780091453>`) {  
     message.reply('well, if you pinged me i think you need some help, by the way, i dont have any prefix, just ping me :D\n\n**here is a list of all my commands:**\n<@913559840780091453> guilds\n\nthere is only one command available rn, more comamnds coming soon lol');
   }
-});
+};
 
 //server list (it wont list out if there are too many servers because the message will be too big to get answered by bot)
 client.on('messageCreate', (message) => {
@@ -54,6 +60,7 @@ client.on('messageCreate', (message) => {
     message.reply(`i am available in the following guilds\n${snippet}\n${Guilds}\n${snippet}`);
   }
 });
+
 
 // Login to Discord with your client's token
 client.login(config.token)
