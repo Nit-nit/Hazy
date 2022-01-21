@@ -50,7 +50,7 @@ client.on('messageCreate', (message) => {
   if (message.content.toLowerCase() === `<@913559840780091453>`) {  
     message.reply('well, if you pinged me i think you need some help, by the way, i dont have any prefix, just ping me :D\n\n**here is a list of all my commands:**\n<@913559840780091453> guilds\n\nthere is only one command available rn, more comamnds coming soon lol');
   }
-};
+});
 
 //server list (it wont list out if there are too many servers because the message will be too big to get answered by bot)
 client.on('messageCreate', (message) => {
