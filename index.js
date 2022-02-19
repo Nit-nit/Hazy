@@ -14,10 +14,18 @@ client.on('ready', () => {
   console.log(`logged in as ${client.user.tag}`)
 })
 
-//console guilds list
+//bot on getting ready events
 client.on("ready", () => {
+  //console guilds list
+  const mem = client.guilds.cache.map(guild => guild.memberCount);
   const Guilds = client.guilds.cache.map(guild => guild.name);
+  console.log(`${client.guilds.cache.size} guilds ${client.channels.cache.size} members`);
   console.log(Guilds);
+  
+  //status
+  client.user.setStatus('dnd');
+  client.user.setActivity(`inside ${client.guilds.cache.size} guilds with total ${client.channels.cache.size} channels`);
+  client.channels.cache.get(`929229613819916328`).send(`i came online\n${client.guilds.cache.size} guilds\n${client.channels.cache.size} channels\n${mem} members respectively in each server`);
 });
 
 /*
