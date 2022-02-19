@@ -12,12 +12,12 @@ const snippet = "```";
 //bot on getting ready events
 client.on("ready", () => {
   //login message
-  console.log(`\n> logged in as ${client.user.tag}`);
+  console.log(`\n~ logged in as ${client.user.tag}`);
   
   //console guilds list
   const mem = client.guilds.cache.map(guild => guild.memberCount);
   const Guilds = client.guilds.cache.map(guild => guild.name);
-  console.log(`> ${client.guilds.cache.size} guilds ${client.channels.cache.size} channels`);
+  console.log(`~ ${client.guilds.cache.size} guilds ${client.channels.cache.size} channels`);
   console.log(Guilds);
   
   //status
