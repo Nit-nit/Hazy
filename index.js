@@ -53,8 +53,8 @@ client.on('ready', () => {
 //ping message (it works as a help command)
 client.on('messageCreate', (message) => {
   if (message.author.bot) return
-  if (message.content.toLowerCase() === `<@913559840780091453>`) {  
-    message.reply('well, if you pinged me i think you need some help, by the way, i dont have any prefix, just ping me :D\n\n**here is a list of all my commands:**\n<@913559840780091453> guilds\n\nthere is only one command available rn, more comamnds coming soon lol');
+  if (message.content.toLowerCase() === `${ping}`) {  
+    message.reply(`well, if you pinged me i think you need some help, by the way, i dont have any prefix, just ping me :D\n\n**here is a list of all my commands:**\n${ping} guilds\n${ping} data`);
   }
 });
 
@@ -67,6 +67,14 @@ client.on('messageCreate', (message) => {
   }
 });
 
+//all data
+client.on('messageCreate', (message) => {
+  if (message.author.bot) return
+  const mem = client.guilds.cache.map(guild => guild.memberCount);
+  if (message.content.toLowerCase() === `${ping} data`) {
+    message.reply(`${client.guilds.cache.size} guilds\n${client.channels.cache.size} channels\n${mem} members respectively in each server`);
+  }
+});
 
 // Login to Discord with your client's token
 client.login(config.token)
