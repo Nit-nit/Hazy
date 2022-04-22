@@ -9,22 +9,32 @@ const ping = "<@913559840780091453>";
 const action = require('discord.js');
 const snippet = "```";
 
-//bot on getting ready events
+// ========== LOGS STARTS HERE ==========
+
 client.on("ready", () => {
   //login message
   console.log(`\n~ logged in as ${client.user.tag}`);
   
-  //console guilds list
-  const mem = client.guilds.cache.map(guild => guild.memberCount);
   const Guilds = client.guilds.cache.map(guild => guild.name);
-  console.log(`~ ${client.guilds.cache.size} guilds ${client.channels.cache.size} channels`);
-  console.log(Guilds);
+  const GuildCount = client.guilds.cache.size;
+  const GuildIds = client.guilds.cache.map(guild => guild.id);
+  const GuildMemCount = client.guilds.cache.map(guild => guild.memberCount);
+  const AllMemCount = GuildMemCount.reduce((a, b) => a + b, 0);
+  const ChannelCount = client.channels.cache.size;
+  const LogChannel = client.channels.cache.get('937315907087269970');
+  
+  //console logs
+  console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMemCount} members\n`);
+  console.log(Guilds, `\n`);
+  console.log(GuildIds, `\n`);
+  console.log(GuildMemCount, `\n`);
   
   //status
   client.user.setStatus('dnd');
-  client.user.setActivity(`inside ${client.guilds.cache.size} guilds with total ${client.channels.cache.size} channels`);
-  client.channels.cache.get(`929229613819916328`).send(`i came online\n${client.guilds.cache.size} guilds\n${client.channels.cache.size} channels\n${mem} members respectively in each server`);
+  client.user.setActivity(`${GuildCount} guilds, ${ChannelCount} channels, total ${AllMemCount} members`);
 });
+
+// ========== LOGS ENDS HERE ==========
 
 
 // ========== COMMANDS STARTS HERE ==========
