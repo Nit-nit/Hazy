@@ -26,27 +26,6 @@ client.on("ready", () => {
   client.channels.cache.get(`929229613819916328`).send(`i came online\n${client.guilds.cache.size} guilds\n${client.channels.cache.size} channels\n${mem} members respectively in each server`);
 });
 
-/*
-// some basic log functions, these arent important i will say, but anyways
-
-//message console logger
-client.on('messageCreate', (message) => {
-  if (message.author.id === `913559840780091453`) return
-  console.log(`\n[${message.author.tag}] in [${message.guild.name}, ${message.channel.name}]:\n${message.content}\n`);
-});
-
-//message channels logs
-client.on('messageCreate', (message) => {
-  if (message.author.id === `913559840780091453`) return
-  client.channels.cache.get('929229613819916328').send(`\n**[__${message.author.tag}__]** in **[__${message.guild.name}, ${message.channel.name}__]**:\n${message.content}\n`);
-})
-
-//channels listing in console
-client.on('ready', () => {
-  const channelName = client.channels.cache.map(channel => channel.name);
-  console.log(channelName);
-});
-*/
 
 // ========== COMMANDS STARTS HERE ==========
 
