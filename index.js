@@ -39,31 +39,10 @@ client.on("ready", () => {
 
 // ========== COMMANDS STARTS HERE ==========
 
-//ping message (it works as a help command)
-client.on('messageCreate', (message) => {
-  if (message.author.bot) return
-  if (message.content.toLowerCase() === `${ping}`) {  
-    message.reply(`well, if you pinged me i think you need some help, by the way, i dont have any prefix, just ping me :D\n\n**here is a list of all my commands:**\n${ping} guilds\n${ping} data`);
-  }
-});
+// ========== COMMANDS ENDS HERE ==========
 
-//server list (it wont list out if there are too many servers because the message will be too big to get answered by bot)
-client.on('messageCreate', (message) => {
-  if (message.author.bot) return
-  const Guilds = client.guilds.cache.map(guild => guild.name);
-  if (message.content.toLowerCase() === `${ping} guilds`) {
-    message.reply(`i am available in the following guilds\n${snippet}\n${Guilds}\n${snippet}`);
-  }
-});
 
-//all data
-client.on('messageCreate', (message) => {
-  if (message.author.bot) return
-  const mem = client.guilds.cache.map(guild => guild.memberCount);
-  if (message.content.toLowerCase() === `${ping} data`) {
-    message.reply(`${client.guilds.cache.size} guilds\n${client.channels.cache.size} channels\n${mem} members respectively in each server`);
-  }
-});
+
 
 // Login to Discord with your client's token
 client.login(config.token)
