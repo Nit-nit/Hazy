@@ -12,9 +12,7 @@ const snippet = "```";
 // ========== LOGS STARTS HERE ==========
 
 client.on("ready", () => {
-  //login message
-  console.log(`\n~ logged in as ${client.user.tag}`);
-  
+  const Username = client.user.tag;
   const Guilds = client.guilds.cache.map(guild => guild.name);
   const GuildCount = client.guilds.cache.size;
   const GuildIds = client.guilds.cache.map(guild => guild.id);
@@ -24,6 +22,7 @@ client.on("ready", () => {
   const LogChannel = client.channels.cache.get('937315907087269970');
   
   //console logs
+  console.log(`\n~ logged in as ${Username}`);
   console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMemCount} members\n`);
   console.log(Guilds, `\n`);
   console.log(GuildIds, `\n`);
