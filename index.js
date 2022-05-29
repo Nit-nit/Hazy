@@ -1,17 +1,8 @@
 // Require the necessary discord.js classes
 const config = require('./config.json');
-const {
-  Discord,
-  Client,
-  Intents
-} = require('discord.js');
+const { Discord, Client, Intents } = require('discord.js');
 
-const client = new Client({
-  intents: [
-  Intents.FLAGS.GUILDS,
-  Intents.FLAGS.GUILD_MESSAGES
-  ]
-});
+const client = new Client({ intents: [ Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES ] });
 
 // ========== LOGS STARTS HERE ==========
 
