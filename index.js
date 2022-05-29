@@ -13,10 +13,6 @@ const client = new Client({
   ]
 });
 
-//custom classes
-const ping = "<@913559840780091453>";
-const snippet = "```";
-
 // ========== LOGS STARTS HERE ==========
 
 client.on("ready", () => {
