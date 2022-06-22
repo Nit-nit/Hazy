@@ -33,7 +33,7 @@ client.on("ready", () => {
 
 
 // ========== COMMANDS STARTS HERE ==========
-
+// no commands currently
 // ========== COMMANDS ENDS HERE ==========
 
 
