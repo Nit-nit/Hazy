@@ -13,4 +13,4 @@ Everyone is allowed to fork the repo and contribute, then you can open a pull re
 
 > [Experimental branch](https://github.com/Nit-nit/hazy/tree/Experimental) contains beta tests from other contributors.
 
-> [Explained branch](https://github.com/Nit-nit/hazy/tree/Explained) contains explained version of code for beginners, explained branch is strictly not allowed to be merged.
+> [Explained branch](https://github.com/Nit-nit/hazy/tree/Explained) contains explained version of code for beginners, this branch is strictly not allowed to be merged.
