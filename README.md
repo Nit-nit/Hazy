@@ -4,7 +4,7 @@
 A discord bot that i am building, I consider him my son lol.<br>
 Some female developer can be his mother if interested. 😴
 
-<span style="text-align:center;">Additional information about branches</span>
+<p style="text-align:center;">Additional information about branches</p>
 
 > [Main branch](https://github.com/Nit-nit/hazy/tree/main) contains all the neat and successful code, 
 
