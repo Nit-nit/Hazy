@@ -1,6 +1,6 @@
 # Hazy - A cool Discord bot
 ![Banner image](/images/hazy.png)
-> It's an explained branch, code will have some few extra lines explaining how things works
+> [Main branch](#) contains all the neat and successful code, [Experimental branch](#) contains beta tests from other contributors, [explained branch](#) contains explained version of code for beginners.
 
 A discord bot that i am building, I consider him my son lol.<br>
 Some female developer can be his mother if interested. 😴
