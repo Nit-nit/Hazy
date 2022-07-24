@@ -21,17 +21,17 @@ client.on("ready", () => {
   const Guilds = client.guilds.cache.map(guild => guild.name);
   const GuildCount = client.guilds.cache.size;
   const GuildIds = client.guilds.cache.map(guild => guild.id);
-  const GuildMemCount = client.guilds.cache.map(guild => guild.memberCount);
-  const AllMemCount = GuildMemCount.reduce((a, b) => a + b, 0);
+  const GuildMembersCount = client.guilds.cache.map(guild => guild.memberCount);
+  const AllMembersCount = GuildMemCount.reduce((a, b) => a + b, 0);
   const ChannelCount = client.channels.cache.size;
   const LogChannel = client.channels.cache.get('937315907087269970');
   
   //console logs
   console.log(`\n~ logged in as ${Username}`);
-  console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMemCount} members\n`);
+  console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members\n`);
   console.log(Guilds, `\n`);
   console.log(GuildIds, `\n`);
-  console.log(GuildMemCount, `\n`);
+  console.log(GuildMembersCount, `\n`);
   
   //status
   client.user.setStatus('dnd');
