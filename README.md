@@ -6,7 +6,7 @@ Some female developer can be his mother if interested. 😴
 
 <br>
 <b>Additional information about branches</b>
-
+<br>
 
 > [Main branch](https://github.com/Nit-nit/hazy/tree/main) contains all the neat and successful code, 
 
