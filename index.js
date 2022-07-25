@@ -14,7 +14,7 @@ const client = new Client({
   ] 
 });
 
-// ========== LOGS STARTS HERE ==========
+// ========== CONSOLE LOGS STARTS HERE ==========
 
 client.on("ready", () => {
   const Username = client.user.tag;
@@ -33,12 +33,19 @@ client.on("ready", () => {
   console.log(GuildIds, `\n`);
   console.log(GuildMembersCount, `\n`);
   
-  //status
+  //status and activity 
   client.user.setStatus('dnd');
   client.user.setActivity(`${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members`);
 });
 
-// ========== LOGS ENDS HERE ==========
+// ========== CONSOLE LOGS ENDS HERE ==========
+
+
+
+
+// ========== MESSAGE LOGS STARTS HERE ==========
+// no message logs currently
+// ========== MESSAGE LOGS ENDS HERE ==========
 
 
 
