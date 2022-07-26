@@ -24,7 +24,7 @@ client.on("ready", () => {
   const GuildMembersCount = client.guilds.cache.map(guild => guild.memberCount);
   const AllMembersCount = GuildMembersCount.reduce((a, b) => a + b, 0);
   const ChannelCount = client.channels.cache.size;
-  const LogChannel = client.channels.cache.get('937315907087269970');
+  const LogChannel = client.channels.cache.get(config.logChannel);
   
   //console logs
   console.log(`\n~ logged in as ${Username}`);
