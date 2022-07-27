@@ -1,4 +1,4 @@
-<div align="center"># Hazy - A cool Discord bot</div>
+# <div align="center">Hazy - A cool Discord bot</div>
 ![Banner image](/images/hazy.png)
 
 A discord bot that i am building, I consider him my son lol.<br>
