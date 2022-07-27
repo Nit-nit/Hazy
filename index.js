@@ -44,14 +44,14 @@ client.on("ready", () => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
-// no message logs currently
+// Message logs coming soon
 // ========== MESSAGE LOGS ENDS HERE ==========
 
 
 
 
 // ========== COMMANDS STARTS HERE ==========
-// no commands currently
+// Commands coming soon
 // ========== COMMANDS ENDS HERE ==========
 
 
