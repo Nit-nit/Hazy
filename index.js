@@ -59,6 +59,5 @@ client.on("ready", () => {
 
 
 
-
 // Login to Discord with your bot token in 'config.json' file.
 client.login(config.token)
