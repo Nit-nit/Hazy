@@ -1,4 +1,4 @@
-// Require the necessary discord.js classes
+// Require the necessary discord.js classes.
 const config = require('./config.json');
 const { 
   Discord, 
@@ -46,18 +46,21 @@ client.on("ready", () => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
-// Message logs coming soon
+// Message logs coming soon.
 // ========== MESSAGE LOGS ENDS HERE ==========
 
 
 
 
 // ========== COMMANDS STARTS HERE ==========
-// Commands coming soon
+// Commands coming soon.
 // ========== COMMANDS ENDS HERE ==========
 
 
 
 
-// Login to Discord with your bot token
+/*
+Login to Discord with your bot token.
+Put your token in 'config.json' file.
+*/
 client.login(config.token)
