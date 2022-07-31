@@ -26,14 +26,16 @@ client.on("ready", () => {
   const ChannelCount = client.channels.cache.size;
   const LogChannel = client.channels.cache.get(config.logChannel);
   
-  //console logs
+  // Console logs
   console.log(`\n~ logged in as ${Username}`);
   console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members\n`);
+
+  // These three logs can be too big to get logged, write them at your own risk
   console.log(Guilds, `\n`);
   console.log(GuildIds, `\n`);
   console.log(GuildMembersCount, `\n`);
-  
-  //status and activity 
+
+  // Status and Activity
   client.user.setStatus('dnd');
   client.user.setActivity(`${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members`);
 });
