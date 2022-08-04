@@ -1,6 +1,6 @@
 # Hazy - A cool Discord bot
 
-[!banner](Images/hazy.png)
+![banner](Images/hazy.png)
 
 A discord bot that i am building, I consider him my son lol.<br>
 Some female developer can be his mother if interested. 😴
