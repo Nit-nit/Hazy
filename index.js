@@ -19,25 +19,27 @@ const client = new Client({
 client.on("ready", () => {
   const Username = client.user.tag;
   const Guilds = client.guilds.cache.map(guild => guild.name);
-  const GuildCount = client.guilds.cache.size;
-  const GuildIds = client.guilds.cache.map(guild => guild.id);
+  const GuildsCount = client.guilds.cache.size;
+  const GuildsIds = client.guilds.cache.map(guild => guild.id);
   const GuildMembersCount = client.guilds.cache.map(guild => guild.memberCount);
-  const AllMembersCount = GuildMembersCount.reduce((a, b) => a + b, 0);
-  const ChannelCount = client.channels.cache.size;
+  const TotalMembersCount = GuildMembersCount.reduce((a, b) => a + b, 0);
+  const ChannelsCount = client.channels.cache.size;
   const LogChannel = client.channels.cache.get(config.logChannel);
   
   // Console logs
   console.log(`\n~ logged in as ${Username}`);
-  console.log(`~ ${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members\n`);
+  console.log(`~ ${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members\n`);
 
+  /*
   // These three logs can be too big to get logged, write them at your own risk
   console.log(Guilds, `\n`);
-  console.log(GuildIds, `\n`);
+  console.log(GuildsIds, `\n`);
   console.log(GuildMembersCount, `\n`);
+  */
 
   // Status and Activity
   client.user.setStatus('dnd');
-  client.user.setActivity(`${GuildCount} guilds, ${ChannelCount} channels, total ${AllMembersCount} members`);
+  client.user.setActivity(`${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members`);
 });
 
 // ========== CONSOLE LOGS ENDS HERE ==========
