@@ -7,7 +7,7 @@ Some female developer can be his mother if interested. 😴
 <br>
 <br>
 
-### Additional information about branches
+## Forking and Branch info
 Everyone is allowed to fork the repo and contribute, then you can open a pull request 😁
 
 > [Main branch](https://github.com/Nit-nit/hazy/tree/main) contains all the neat and successful code.
