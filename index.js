@@ -18,8 +18,8 @@ const client = new Client({
 
 client.on("ready", () => {
   // Cache shortcuts to make code convenient and short.
-  GuildsCache = client.guilds.cache;
-  ChannelsCache = client.channels.cache;
+  const GuildsCache = client.guilds.cache;
+  const ChannelsCache = client.channels.cache;
 
   // Things which are actually going to get logged.
   const Username = client.user.tag;
