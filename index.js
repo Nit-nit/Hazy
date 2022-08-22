@@ -45,6 +45,7 @@ client.on("ready", () => {
   // Status and Activity.
   client.user.setStatus('dnd');
   client.user.setActivity(`${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members`);
+  LogChannel.send('i came online');
 });
 
 // ========== CONSOLE LOGS ENDS HERE ==========
