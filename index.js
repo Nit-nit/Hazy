@@ -17,29 +17,35 @@ const client = new Client({
 // ========== CONSOLE LOGS STARTS HERE ==========
 
 client.on("ready", () => {
+  // Cache shortcuts to make code convenient and short.
+  const GuildsCache = client.guilds.cache;
+  const ChannelsCache = client.channels.cache;
+
+  // Things which are actually going to get logged.
   const Username = client.user.tag;
-  const Guilds = client.guilds.cache.map(guild => guild.name);
-  const GuildsCount = client.guilds.cache.size;
-  const GuildsIds = client.guilds.cache.map(guild => guild.id);
-  const GuildMembersCount = client.guilds.cache.map(guild => guild.memberCount);
+  const Guilds = GuildsCache.map(guild => guild.name);
+  const GuildsCount = GuildsCache.size;
+  const GuildsIds = GuildsCache.map(guild => guild.id);
+  const GuildMembersCount = GuildsCache.map(guild => guild.memberCount);
   const TotalMembersCount = GuildMembersCount.reduce((a, b) => a + b, 0);
-  const ChannelsCount = client.channels.cache.size;
-  const LogChannel = client.channels.cache.get(config.logChannel);
+  const ChannelsCount = ChannelsCache.size;
+  const LogChannel = ChannelsCache.get(config.logChannel);
   
-  // Console logs
+  // Console logs.
   console.log(`\n~ logged in as ${Username}`);
   console.log(`~ ${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members\n`);
 
   /*
-  // These three logs can be too big to get logged, write them at your own risk
+  // These three logs can be too big to get logged, write them at your own risk.
   console.log(Guilds, `\n`);
   console.log(GuildsIds, `\n`);
   console.log(GuildMembersCount, `\n`);
   */
 
-  // Status and Activity
+  // Status and Activity.
   client.user.setStatus('dnd');
   client.user.setActivity(`${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members`);
+  LogChannel.send('i came online');
 });
 
 // ========== CONSOLE LOGS ENDS HERE ==========
