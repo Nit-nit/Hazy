@@ -12,8 +12,6 @@ Some female developer can be his mother if interested. 😴
 - A text editor to edit the code.
 - Nodejs, a programming language to code (what version idk, maybe latest).
 - Discord.js-v13, a module which runs the code (we will switch to v14 soon).
-<br>
-<br>
 
 ## Forking and Branch info
 Everyone is allowed to fork the repo and contribute, then you can open a pull request 😁
