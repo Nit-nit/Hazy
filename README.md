@@ -11,7 +11,7 @@ Some female developer can be his mother if interested. 😴
 - [**A terminal**](#) - To run the code.
 - [**A text editor**](#) - To edit the code.
 - [**Nodejs**](#) - A programming language to code (what version idk, maybe latest).
-- [**Discord.js-v13**](#) - A module which runs the code (we will switch to v14 soon).
+- [**Discord.js-v13 or newer**](#) - A module which runs the code (we will switch to v14 soon).
 <br>
 
 ## Forking and Branch info
