@@ -8,10 +8,10 @@ Some female developer can be his mother if interested. 😴
 <br>
 
 ## Requirements
-- [**A terminal**](#) - To run the code.
-- [**A text editor**](#) - To edit the code.
-- [**Nodejs**](#) - A programming language to code (what version idk, maybe latest).
-- [**Discord.js-v13 or newer**](#) - A module which runs the code (we will switch to v14 soon).
+- [**A terminal**](#requirements) - To run the code.
+- [**A text editor**](#requirements) - To edit the code.
+- [**Nodejs**](#requirements) - A programming language to code (what version idk, maybe latest).
+- [**Discord.js-v13 or newer**](#requirements) - A module which runs the code (we will switch to v14 soon).
 <br>
 
 ## Forking and Branch info
