@@ -62,6 +62,43 @@ client.on("ready", async function() => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
+// Guild message logger
+client.on('messageCreate', (message) => {
+  const RoleTheme = chalk.hex('#000').bgHex(`${message.member?.displayHexColor}`);
+  
+  if (message.author.bot) return
+  if (message.member?.displayHexColor === '#000000') return
+  
+  if (message.channel.type === ChannelType.GuildText) {
+    console.log(RoleTheme(`${message.author.tag}`)+` in #${message.channel.name}\n`+`${message.content} \n`);
+  }
+});
+
+// Guild message logger if the role color is black
+client.on('messageCreate', (message) => {
+  const NoTheme = chalk.hex('#000').bgHex('#fff');
+  
+  if (message.author.bot) return
+  if (message.member?.displayHexColor === '#000000') {
+    console.log(NoTheme(`${message.author.tag}`)+` in #${message.channel.name}\n`+`${message.content} \n`);
+  }
+});
+
+// DMs message logger
+client.on('messageCreate', (message) => {
+  const DMTheme = chalk.hex('#fff').bgHex('#828282');
+  
+  if (message.author.bot) return
+  if (message.channel.type === ChannelType.Dm) {
+    console.log(DMTheme(`${message.author.tag}`)+` in dms\n`+`${message.content} \n`);
+  }
+});
+// ========== MESSAGE LOGS ENDS HERE ==========
+
+
+
+
+// ========== TEXT COMMANDS STARTS HERE ==========
 
 // A simple ping command.
 client.on('messageCreate', (message) => {
@@ -70,13 +107,6 @@ client.on('messageCreate', (message) => {
   }
 });
 
-// ========== MESSAGE LOGS ENDS HERE ==========
-
-
-
-
-// ========== TEXT COMMANDS STARTS HERE ==========
-// Commands coming soon.
 // ========== TEXT COMMANDS ENDS HERE ==========
 
 
