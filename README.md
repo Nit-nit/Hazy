@@ -11,7 +11,7 @@ Some female developer can be his mother if interested. 😴
 - [**A terminal**](#requirements) - To run the code.
 - [**A text editor**](#requirements) - To edit the code.
 - [**Nodejs**](#requirements) - A programming language to code (what version idk, maybe latest).
-- [**Discord.js-v13 or newer**](#requirements) - A module which runs the code (we will switch to v14 soon).
+- [**Discord.js-v14 or newer**](#requirements) - discord.js is the module which runs your discord bot.
 <br>
 
 ## Required Node Modules
