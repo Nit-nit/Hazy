@@ -14,6 +14,10 @@ Some female developer can be his mother if interested. 😴
 - [**Discord.js-v13 or newer**](#requirements) - A module which runs the code (we will switch to v14 soon).
 <br>
 
+## Required Node Modules
+- [**Chalk**](#required-node-modules) - Chalk is a color node module which can write colored texts in terminal.
+<br>
+
 ## Forking and Branch info
 Everyone is allowed to fork the repo and contribute, then you can open a pull request 😁
 
