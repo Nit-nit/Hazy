@@ -24,7 +24,7 @@ const client = new Client({
 
 // ========== CONSOLE LOGS STARTS HERE ==========
 
-client.on("ready", () => {
+client.on("ready", async function() => {
   // Cache shortcuts to make code convenient and short.
   const GuildsCache = client.guilds.cache;
   const ChannelsCache = client.channels.cache;
