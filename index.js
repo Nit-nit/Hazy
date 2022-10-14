@@ -68,9 +68,9 @@ client.on("ready", async function() => {
 
 
 
-// ========== COMMANDS STARTS HERE ==========
+// ========== TEXT COMMANDS STARTS HERE ==========
 // Commands coming soon.
-// ========== COMMANDS ENDS HERE ==========
+// ========== TEXT COMMANDS ENDS HERE ==========
 
 
 
