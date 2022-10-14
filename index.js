@@ -1,22 +1,32 @@
 // Require the necessary discord.js classes.
-const config = require('./config.json');
 const { 
   Discord, 
   Client, 
-  Intents 
+  GatewayIntentBits,
+  Partials,
+  Collections,
+  ChannelType
 } = require('discord.js');
 
 const client = new Client({ 
   intents: [ 
-    Intents.FLAGS.GUILDS, 
-    Intents.FLAGS.GUILD_MESSAGES, 
-    Intents.FLAGS.DIRECT_MESSAGES 
-  ] 
+    GatewayIntentBits.Guilds 
+    GatewayIntentBits.GuildMessages, 
+    GatewayIntentBits.MessageContent
+  ]
+
+  partials: [
+    Partials.Channel
+  ]
 });
+
+// Required custom node modules and files.
+const config = require('./config.json');
+const chalk = require('chalk');
 
 // ========== CONSOLE LOGS STARTS HERE ==========
 
-client.on("ready", () => {
+client.on("ready", async function() => {
   // Cache shortcuts to make code convenient and short.
   const GuildsCache = client.guilds.cache;
   const ChannelsCache = client.channels.cache;
@@ -54,15 +64,54 @@ client.on("ready", () => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
-// Message logs coming soon.
+
+// Guild message logger
+client.on('messageCreate', (message) => {
+  const RoleTheme = chalk.hex('#000').bgHex(`${message.member?.displayHexColor}`);
+  
+  if (message.author.bot) return
+  if (message.member?.displayHexColor === '#000000') return
+  
+  if (message.channel.type === ChannelType.GuildText) {
+    console.log(RoleTheme(`${message.author.tag}`)+` in #${message.channel.name}\n`+`${message.content} \n`);
+  }
+});
+
+// Guild message logger if the role color is black
+client.on('messageCreate', (message) => {
+  const NoTheme = chalk.hex('#000').bgHex('#fff');
+  
+  if (message.author.bot) return
+  if (message.member?.displayHexColor === '#000000') {
+    console.log(NoTheme(`${message.author.tag}`)+` in #${message.channel.name}\n`+`${message.content} \n`);
+  }
+});
+
+// DMs message logger
+client.on('messageCreate', (message) => {
+  const DMTheme = chalk.hex('#fff').bgHex('#828282');
+  
+  if (message.author.bot) return
+  if (message.channel.type === ChannelType.Dm) {
+    console.log(DMTheme(`${message.author.tag}`)+` in dms\n`+`${message.content} \n`);
+  }
+});
+
 // ========== MESSAGE LOGS ENDS HERE ==========
 
 
 
 
-// ========== COMMANDS STARTS HERE ==========
-// Commands coming soon.
-// ========== COMMANDS ENDS HERE ==========
+// ========== TEXT COMMANDS STARTS HERE ==========
+
+// A simple ping command.
+client.on('messageCreate', (message) => {
+  if (message.content.toLowerCase() === 'ping') {
+    message.reply('pong');
+  }
+});
+
+// ========== TEXT COMMANDS ENDS HERE ==========
 
 
 
