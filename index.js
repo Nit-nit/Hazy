@@ -62,7 +62,14 @@ client.on("ready", async function() => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
-// Message logs coming soon.
+
+// A simple ping command.
+client.on('messageCreate', (message) => {
+  if (message.content.toLowerCase() === 'ping') {
+    message.reply('pong');
+  }
+});
+
 // ========== MESSAGE LOGS ENDS HERE ==========
 
 
