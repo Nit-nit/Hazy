@@ -1,16 +1,20 @@
 // Require the necessary discord.js classes.
 const config = require('./config.json');
+
 const { 
   Discord, 
   Client, 
-  Intents 
+  GatewayIntentBits,
+  Partials,
+  Collections,
+  ChannelType
 } = require('discord.js');
 
 const client = new Client({ 
   intents: [ 
-    Intents.FLAGS.GUILDS, 
-    Intents.FLAGS.GUILD_MESSAGES, 
-    Intents.FLAGS.DIRECT_MESSAGES 
+    GatewayIntentBits.Guilds 
+    GatewayIntentBits.GuildMessages, 
+    GatewayIntentBits.MessageContent
   ] 
 });
 
