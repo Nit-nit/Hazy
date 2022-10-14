@@ -64,6 +64,7 @@ client.on("ready", async function() => {
 
 
 // ========== MESSAGE LOGS STARTS HERE ==========
+
 // Guild message logger
 client.on('messageCreate', (message) => {
   const RoleTheme = chalk.hex('#000').bgHex(`${message.member?.displayHexColor}`);
@@ -95,6 +96,7 @@ client.on('messageCreate', (message) => {
     console.log(DMTheme(`${message.author.tag}`)+` in dms\n`+`${message.content} \n`);
   }
 });
+
 // ========== MESSAGE LOGS ENDS HERE ==========
 
 
