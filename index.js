@@ -1,6 +1,4 @@
 // Require the necessary discord.js classes.
-const config = require('./config.json');
-
 const { 
   Discord, 
   Client, 
@@ -22,6 +20,8 @@ const client = new Client({
   ]
 });
 
+// Required custom node modules and files.
+const config = require('./config.json');
 const chalk = require('chalk');
 
 // ========== CONSOLE LOGS STARTS HERE ==========
