@@ -22,6 +22,8 @@ const client = new Client({
   ]
 });
 
+const chalk = require('chalk');
+
 // ========== CONSOLE LOGS STARTS HERE ==========
 
 client.on("ready", async function() => {
