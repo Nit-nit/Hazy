@@ -15,7 +15,11 @@ const client = new Client({
     GatewayIntentBits.Guilds 
     GatewayIntentBits.GuildMessages, 
     GatewayIntentBits.MessageContent
-  ] 
+  ]
+
+  partials: [
+    Partials.Channel
+  ]
 });
 
 // ========== CONSOLE LOGS STARTS HERE ==========
