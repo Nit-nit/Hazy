@@ -7,15 +7,15 @@ Some female developer can be his mother if interested. 😴
 <br>
 <br>
 
-## Requirements
+## Required Tools
 - [**A terminal**](#requirements) - To run the code.
 - [**A text editor**](#requirements) - To edit the code.
 - [**Nodejs**](#requirements) - A programming language to code (what version idk, maybe latest).
-- [**Discord.js-V14 or newer**](#requirements) - A node module which runs your discord bot.
 <br>
 
 ## Required Node Modules
-- [**Chalk**](#required-node-modules) - Chalk is a color node module which can write colored texts in terminal.
+- [**Discord.js-V14 or newer**](#required-node-modules) - A node module which runs your discord bot.
+- [**Chalk**](#required-node-modules) - A node module which can write colored texts in terminal.
 <br>
 
 ## Forking and Branch info
