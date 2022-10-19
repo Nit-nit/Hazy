@@ -15,7 +15,7 @@ Some female developer can be his mother if interested. 😴
 
 ## Required Node Modules
 - [**Discord.js-V14 or newer**](#required-node-modules) - A node module which runs your discord bot.
-- [**Chalk**](#required-node-modules) - A node module which can write colored texts in terminal.
+- [**Chalk-V4.1.2 or older**](#required-node-modules) - A node module which can write colored texts in terminal.
 <br>
 
 ## Forking and Branch info
