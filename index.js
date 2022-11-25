@@ -1,7 +1,7 @@
 // Require the necessary discord.js classes.
-const { 
-  Discord, 
-  Client, 
+const {
+  Discord,
+  Client,
   GatewayIntentBits,
   Partials,
   Collections,
@@ -10,8 +10,8 @@ const {
 
 const client = new Client({ 
   intents: [ 
-    GatewayIntentBits.Guilds 
-    GatewayIntentBits.GuildMessages, 
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent
   ]
 
