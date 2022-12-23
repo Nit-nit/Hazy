@@ -43,7 +43,10 @@ client.on("ready", async function() => {
   
   // Console logs.
   console.log(`\n~ logged in as ${Username}`);
-  console.log(`~ ${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members\n`);
+  console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${Userid}`));
+  console.log(`~ Total`, chalk.green.bgBlack(`${GuildCount}`), `Guilds`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${ChannelCount}`), `Channels`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${AllMemCount}`), `Members\n`);
 
   /*
   // These three logs can be too big to get logged, write them at your own risk.
