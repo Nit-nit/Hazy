@@ -42,7 +42,6 @@ client.on("ready", async function() => {
   const LogChannel = ChannelsCache.get(config.logChannel);
   
   // Console logs.
-  console.log(`\n~ logged in as ${Username}`);
   console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${Userid}`));
   console.log(`~ Total`, chalk.green.bgBlack(`${GuildCount}`), `Guilds`);
   console.log(`~ Total`, chalk.green.bgBlack(`${ChannelCount}`), `Channels`);
