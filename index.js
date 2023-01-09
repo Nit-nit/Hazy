@@ -13,7 +13,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent
-  ]
+  ],
 
   partials: [
     Partials.Channel
@@ -26,7 +26,7 @@ const chalk = require('chalk');
 
 // ========== CONSOLE LOGS STARTS HERE ==========
 
-client.on("ready", async function() => {
+client.on("ready", async function() {
   // Cache shortcuts to make code convenient and short.
   const GuildsCache = client.guilds.cache;
   const ChannelsCache = client.channels.cache;
