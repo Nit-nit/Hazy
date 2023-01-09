@@ -33,6 +33,7 @@ client.on("ready", async function() {
 
   // Things which are actually going to get logged.
   const Username = client.user.tag;
+  const Uerid = client.user.id;
   const Guilds = GuildsCache.map(guild => guild.name);
   const GuildsCount = GuildsCache.size;
   const GuildsIds = GuildsCache.map(guild => guild.id);
@@ -43,9 +44,9 @@ client.on("ready", async function() {
   
   // Console logs.
   console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${Userid}`));
-  console.log(`~ Total`, chalk.green.bgBlack(`${GuildCount}`), `Guilds`);
-  console.log(`~ Total`, chalk.green.bgBlack(`${ChannelCount}`), `Channels`);
-  console.log(`~ Total`, chalk.green.bgBlack(`${AllMemCount}`), `Members\n`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${GuildsCount}`), `Guilds`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${ChannelsCount}`), `Channels`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${TotalMembersCount}`), `Members\n`);
 
   /*
   // These three logs can be too big to get logged, write them at your own risk.
