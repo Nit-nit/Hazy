@@ -1,4 +1,4 @@
-// Require the necessary discord.js classes.
+// Requires the necessary discord.js classes.
 const {
   Discord,
   Client,
