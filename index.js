@@ -13,7 +13,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent
-  ]
+  ],
 
   partials: [
     Partials.Channel
@@ -26,13 +26,14 @@ const chalk = require('chalk');
 
 // ========== CONSOLE LOGS STARTS HERE ==========
 
-client.on("ready", async function() => {
+client.on("ready", async function() {
   // Cache shortcuts to make code convenient and short.
   const GuildsCache = client.guilds.cache;
   const ChannelsCache = client.channels.cache;
 
   // Things which are actually going to get logged.
   const Username = client.user.tag;
+  const Uerid = client.user.id;
   const Guilds = GuildsCache.map(guild => guild.name);
   const GuildsCount = GuildsCache.size;
   const GuildsIds = GuildsCache.map(guild => guild.id);
@@ -42,8 +43,10 @@ client.on("ready", async function() => {
   const LogChannel = ChannelsCache.get(config.logChannel);
   
   // Console logs.
-  console.log(`\n~ logged in as ${Username}`);
-  console.log(`~ ${GuildsCount} guilds, ${ChannelsCount} channels, total ${TotalMembersCount} members\n`);
+  console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${Userid}`));
+  console.log(`~ Total`, chalk.green.bgBlack(`${GuildsCount}`), `Guilds`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${ChannelsCount}`), `Channels`);
+  console.log(`~ Total`, chalk.green.bgBlack(`${TotalMembersCount}`), `Members\n`);
 
   /*
   // These three logs can be too big to get logged, write them at your own risk.

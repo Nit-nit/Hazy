@@ -3,7 +3,7 @@
 ![banner](images/hazy.png)
 
 A discord bot that i am building, I consider him my son lol.<br>
-Some female developer can be his mother if interested. 😴
+Some female developer can willingly become his mother by contributing to the code, if interested. 😴
 <br>
 <br>
 
@@ -15,7 +15,9 @@ Some female developer can be his mother if interested. 😴
 
 ## Required Node Modules
 - [**Discord.js(V14 or newer)**](#required-node-modules) - A node module which runs your discord bot.
+`npm install discord.js`
 - [**Chalk(V4.1.2 or older)**](#required-node-modules) - A node module which can write colored texts in terminal.
+`npm install chalk@4.1.2`
 <br>
 
 ## Forking and Branch info
