@@ -1,5 +1,3 @@
-// This is a test of editing my code file mobile for the first time, I didn't noticed they launched this function, but this is a moment to feel glad about GitHub's big achievement, HURRAY!
-
 // Requires the necessary discord.js classes.
 const {
   Discord,
