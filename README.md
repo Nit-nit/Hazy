@@ -2,7 +2,7 @@
 
 ![banner](images/hazy.png)
 
-A discord bot that i am building, open for collaboration
+A discord bot which I built, open for collaboration, feedback and improvement.
 <br>
 <br>
 
