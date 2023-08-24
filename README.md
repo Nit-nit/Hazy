@@ -2,8 +2,7 @@
 
 ![banner](images/hazy.png)
 
-A discord bot that i am building, I consider him my son lol.<br>
-Some female developer can willingly become his mother by contributing to the code, if interested. 😴
+A discord bot that i am building, open for collaboration
 <br>
 <br>
 
