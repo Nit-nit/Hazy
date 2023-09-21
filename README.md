@@ -2,7 +2,7 @@
 
 ![banner](images/hazy.png)
 
-A discord bot which I built, open for collaboration, feedback and improvement.
+A stalker Discord Bot to count servers, count members and log server messages into the terminal along with the username, timestamp, channel name as well as the user's ID and role color, I built it, open for collaboration, feedback and improvement.
 <br>
 <br>
 
