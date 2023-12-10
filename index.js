@@ -33,7 +33,7 @@ client.on("ready", async function() {
 
   // Things which are actually going to get logged.
   const Username = client.user.tag;
-  const Uerid = client.user.id;
+  const UserId = client.user.id;
   const Guilds = GuildsCache.map(guild => guild.name);
   const GuildsCount = GuildsCache.size;
   const GuildsIds = GuildsCache.map(guild => guild.id);
@@ -43,7 +43,7 @@ client.on("ready", async function() {
   const LogChannel = ChannelsCache.get(config.logChannel);
   
   // Console logs.
-  console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${Userid}`));
+  console.log(`\n~ Logged in as`, chalk.black.bgGreen(`${Username}`), chalk.black.bgGreen(`${UserId}`));
   console.log(`~ Total`, chalk.green.bgBlack(`${GuildsCount}`), `Guilds`);
   console.log(`~ Total`, chalk.green.bgBlack(`${ChannelsCount}`), `Channels`);
   console.log(`~ Total`, chalk.green.bgBlack(`${TotalMembersCount}`), `Members\n`);
